@@ -36,6 +36,11 @@ public class Person {
         this.age = newAge;
     }
 
+    //greeting method that said hi
+
+    public String greeting(){
+        return "Hi, I'm a person!";
+    }
 
 
 

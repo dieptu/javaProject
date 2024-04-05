@@ -2,8 +2,8 @@ package model;
 /**
  * IdisplayInfo
  */
-public interface IdisplayInfo {
-    void displayInfo();
+public interface IdisplayInfo{
+    String displayInfo();
 } 
     
 

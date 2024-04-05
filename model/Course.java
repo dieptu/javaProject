@@ -1,21 +1,21 @@
 package model;
 
-public class Course implements IdisplayInfo {
+public class Course implements IdisplayInfo{
     
-    private String courseCode;
+    private CourseCode courseCode;
     private String courseName;
 
-    public Course(String code, String name){
+    public Course(CourseCode code, String name){
         this.courseCode = code;
         this.courseName = name;
     }
     
 
-    public String getCourseCode(){
+    public CourseCode getCourseCode(){
         return this.courseCode;
     }
 
-    public void setCourseCode(String code){
+    public void setCourseCode(CourseCode code){
         this.courseCode = code;
     }
 
@@ -27,8 +27,11 @@ public class Course implements IdisplayInfo {
         this.courseName = name;
     }
 
-    public void displayInfo(){
-        System.out.printf("course code: %s, course name: %s\n", courseCode, courseName);
+    public String displayInfo(){
+        return String.format("course code: %s, course name: %s\n", courseCode, courseName) ;
     }
     
 }
+
+//enum for course code
+//
