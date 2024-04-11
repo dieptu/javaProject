@@ -1,16 +1,26 @@
 
 import model.Course;
 import model.CourseCode;
+import model.Person;
 import model.Student;
 
 public class Main {
     public static void main(String[] args) {
+
+        //Person instance
+        Person person = new Person("Smith", "James", 22);
+        var personGreeting = person.greeting();
+        System.out.println(personGreeting);
+        
+
+        //Student instance
         Student student = new Student("Smith","John", 20, 99999);
         var studentGreeting = student.greeting();
         var studentInfo = student.displayInfo();
         System.out.println(studentGreeting);
         System.out.println(studentInfo);
 
+        //Courses instance
         Course course1 = new Course(CourseCode.ENG101, "English 101");
         Course course2 = new Course(CourseCode.JAVA101, "Introduction to Java");
         Course course3 = new Course(CourseCode.MATH101, "Math 101");
@@ -46,7 +56,12 @@ public class Main {
         System.out.println(dropOut1);
 
 
-        
+
+        //Polymorphism example
+        Person studentOutsideOfSchool = new Student("Steward", "Mark", 24, 1111111);
+        var studentOOSGretting = studentOutsideOfSchool.greeting();
+        var studentSudy = ((Student)studentOutsideOfSchool).study();
+        System.out.println(studentOOSGretting);
         
     }
     
